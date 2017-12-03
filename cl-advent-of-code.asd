@@ -6,10 +6,14 @@
   :license "MIT"
   :depends-on (#:alexandria
                #:serapeum
+               #:cl-ppcre
                #:cl-annot)
   :serial t
   :pathname "src"
   :components ((:file "package")
-               (:file "inverse-captcha"))
+               (:file "inverse-captcha") ; 1
+               (:file "calculate-checksum") ; 2
+               )
+
   :in-order-to ((asdf:test-op
                  (asdf:test-op #:cl-advent-of-code-tests))))
